@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import "./var+mixin";
+
+body{
+    margin: 0;
+    background: lightsteelblue;
+    font-family: 'Roboto', sans-serif;
+}
+.social{
+    position: fixed;
+    @include viewportSize();
+    transform: translateX(12em);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    &__blog{
+        background-color: #e17b77;
+    }
+    &__twitter{
+        background-color: #00aced;
+    }
+    &__linkedin{
+        background-color: #007bb6;
+    }
+    &__facebook{
+        background-color: #3b5998;
+    }
+    &__github{
+        background-color: #333;
+    }
+    a{
+        color: $textColor;
+        text-decoration: underline;
+        padding: 0.9rem;
+        width: 13em;
+        text-align: left;
+        transition: 300ms ease-in-out;
+        &:hover{
+            transform: translate(-12em, 0);
+        }
+        i{
+            margin-right: 1.2em;
+        }
+    }
+}
